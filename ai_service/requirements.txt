@@ -1,0 +1,4 @@
+flask==2.0.1
+requests==2.26.0
+tensorflow==2.6.0
+numpy==1.19.5

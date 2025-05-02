@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Dashboard</title>
+    <script>
+        function updateData() {
+            fetch('http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:TrafficSensor:001')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('count').innerText = data.vehicleCount.value;
+                    document.getElementById('congestion').innerText = data.congestionLevel.value;
+                });
+        }
+        setInterval(updateData, 2000);
+    </script>
+</head>
+<body>
+    <h1>Traffic Monitoring</h1>
+    <p>Vehicle Count: <span id="count">{{ data.vehicleCount.value }}</span></p>
+    <p>Congestion Level: <span id="congestion">{{ data.congestionLevel.value }}</span></p>
+</body>
+</html>

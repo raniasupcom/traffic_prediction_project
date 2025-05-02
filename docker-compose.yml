@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  orion:
+    image: fiware/orion-ld
+    ports:
+      - "1026:1026"
+    command: -dbHost mongodb -logLevel DEBUG
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  vehicle_provider:
+    build: ./vehicle_provider
+    ports:
+      - "5001:5000"
+    depends_on:
+      - orion
+
+  ai_service:
+    build: ./ai_service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - orion
+
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "8080:8080"
+    depends_on:
+      - orion
+
+volumes:
+  mongodb_data:
