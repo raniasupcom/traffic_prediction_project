@@ -5,7 +5,7 @@
 ## 📦 Quick Deployment
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/traffic-prediction.git
+git clone https://github.com/raniasupcom/traffic-prediction.git
 cd traffic-prediction
 
 # 2. Start services
