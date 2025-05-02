@@ -1,6 +1,6 @@
 # 🚦 Real-Time Traffic Prediction with FIWARE
 
-![FIWARE Architecture](https://fiware.org/wp-content/uploads/2022/05/fiware-arch.png)
+
 
 ## 📦 Quick Deployment
 ```bash
