@@ -2,21 +2,30 @@
 <html>
 <head>
     <title>Traffic Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .metric { margin-bottom: 15px; font-size: 18px; }
+        .value { font-weight: bold; }
+    </style>
     <script>
         function updateData() {
-            fetch('http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:TrafficSensor:001')
+            fetch('/')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('count').innerText = data.vehicleCount.value;
                     document.getElementById('congestion').innerText = data.congestionLevel.value;
-                });
+                })
+                .catch(error => console.error('Error:', error));
         }
+        
+        // Initial load and then every 2 seconds
+        updateData();
         setInterval(updateData, 2000);
     </script>
 </head>
 <body>
-    <h1>Traffic Monitoring</h1>
-    <p>Vehicle Count: <span id="count">{{ data.vehicleCount.value }}</span></p>
-    <p>Congestion Level: <span id="congestion">{{ data.congestionLevel.value }}</span></p>
+    <h1>Traffic Monitoring Dashboard</h1>
+    <div class="metric">Vehicle Count: <span id="count" class="value">{{ data.vehicleCount.value }}</span></div>
+    <div class="metric">Congestion Level: <span id="congestion" class="value">{{ data.congestionLevel.value }}</span></div>
 </body>
 </html>
