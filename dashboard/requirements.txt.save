@@ -1,7 +1,9 @@
-Flask==2.0.3
+FHEAD
 requests==2.26.0
 tensorflow==2.6.0
 numpy==1.19.5
 Werkzeug==2.0.3
 flask-cors==3.0.10
+=======
 Werkzeug==2.0.3
+>>>>>>> e0270e66ef52d9a11ab886db3da5e969ea2a71d6

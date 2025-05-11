@@ -32,4 +32,7 @@ services:
       - "8080:8080"
     depends_on:
       - orion
-
+  route-provider:
+    build: ./route_provider
+    ports:
+      - "5001:5000"
