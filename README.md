@@ -85,7 +85,7 @@ bash
 Copy
 Edit
 # 1. Clonez le projet
-git clone https://github.com/votre-utilisateur/traffic-dt.git
+git clone [https://github.com/votre-utilisateur/traffic-dt.git](https://github.com/raniasupcom/traffic_prediction_project.git)
 cd traffic-prediction
 
 # 2. Lancez les conteneurs
