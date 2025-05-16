@@ -3,7 +3,8 @@
 
 📌 Contexte
 
-L’urbanisation rapide engendre une densité croissante du trafic. Pour optimiser la gestion du trafic en temps réel, ce projet propose une solution basée sur des Jumeaux Numériques :
+L’urbanisation rapide engendre une densité croissante du trafic. 
+Pour optimiser la gestion du trafic en temps réel, ce projet propose une solution basée sur des Jumeaux Numériques :
 
 TrafficSensor : Représente les capteurs de trafic en temps réel.
 
@@ -29,7 +30,7 @@ Docker / Docker Compose
 Python (Flask) pour les services backend
 
 🧠 Modèles de Données (NGSI-LD)
-1. 📍 TrafficSensor
+1.  TrafficSensor
 
 
 {
@@ -48,7 +49,8 @@ Python (Flask) pour les services backend
   }
 }
 
-2. 🚗 RouteProvider
+
+2.  RouteProvider
 
 
 {
@@ -71,7 +73,7 @@ Python (Flask) pour les services backend
 
 
 ⚙️ Installation avec Docker Compose
-✅ Prérequis
+ Prérequis
 
 
 docker --version        # >= 20.10
@@ -80,10 +82,8 @@ docker-compose --version  # >= 2.2
 
 
 
-🚀 Lancement de l'application
-bash
-Copy
-Edit
+ Lancement de l'application
+
 # 1. Clonez le projet
 git clone [https://github.com/votre-utilisateur/traffic-dt.git](https://github.com/raniasupcom/traffic_prediction_project.git)
 cd traffic-prediction
@@ -201,11 +201,11 @@ curl 'http://localhost:1026/ngsi-ld/v1/entities/urn:ngsi-ld:RouteProvider:001 | 
 
 📸 Résultats & Captures d’écran
 
-📍 Architecture globale
+Architecture globale
 
 ![image](https://github.com/user-attachments/assets/8f391781-3194-4d39-84db-519947ac45b6)
 
 
 
-📊 Dashboard (Exemples)
+ Dashboard (Exemples)
 ![image](https://github.com/user-attachments/assets/06af6fe8-fdbf-4054-91a8-c9bd0935add8)
